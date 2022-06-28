@@ -1,0 +1,77 @@
+/* RESET */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* COMMON */
+ul{
+    list-style-type: none;
+}
+
+.wrapper{
+    background-color: lightgreen;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container{
+    min-width: 950px;
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+    
+}
+
+.contact-col{
+    width: 30%;
+    background-color: aquamarine;
+    height: 100vh;
+   
+}
+
+.message-col{
+    width: 70%;
+    background-color: bisque;
+    height: 100vh;
+    
+}
+
+.contact-col-top{
+    background-color: coral;
+    border-right: 1px solid black;
+
+}
+
+.notification{
+    background-color:cornflowerblue;
+}
+
+.search-input{
+    background-color: yellowgreen;
+    text-align: center;
+}
+
+.search-input input{
+    padding: 5px 10px;
+    width: 250px;
+}
+
+.message-col-top{
+    background-color: coral;
+
+}
+
+.chat-content{
+    background-image: url(../img/mine.jpg);
+}
+
+.input-message{
+    background-color: coral;
+
+}
+
+
+
