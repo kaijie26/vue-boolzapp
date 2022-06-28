@@ -30,7 +30,7 @@ ul{
 /* Columns */
 .contact-col{
     width: 30%;
-    background-color: aquamarine;
+    background-color: white;
     display: flex;
     flex-direction: column;
    
@@ -53,7 +53,10 @@ ul{
 }
 
 .message-col-top{
-    background-color: coral;
+    background-color: whitesmoke;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
 
 }
 
@@ -110,16 +113,17 @@ ul{
 
 /* Search-input */
 .search-input{
-    background-color: white;
-    height: 30px;
-    padding-left: 15px;
+    background-color: whitesmoke;
+    height: 50px;
+    padding: 10px;
+
     
     
 }
 
 .search-input input{
     padding: 5px 10px;
-    width: 250px;
+    width: 350px;
     border: transparent;
 }
 
@@ -142,17 +146,43 @@ ul{
     margin-bottom: 10px;
 }
 
+
 /* Chat-content  */
 .chat-content{
     background-image: url(../img/mine.jpg);
 }
 
-/* Input-message */
-.input-message{
-    background-color: coral;
+.sent-message{
+    background-color: limegreen;
 
 }
 
+.received-message{
+    background-color: aqua;
+
+}
+
+/* Input-message */
+.input-message{
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.input-message input{
+    border: transparent;
+    width: 90%;
+    padding: 10px;
+    margin: 0 15px;
+}
+
+.smile{
+    color:gray;
+    vertical-align: middle;
+
+}
 
 
 
