@@ -8,6 +8,7 @@
 /* COMMON */
 ul{
     list-style-type: none;
+    
 }
 
 .wrapper{
@@ -16,6 +17,7 @@ ul{
     overflow: hidden;
 }
 
+/* Main */
 .container{
     min-width: 950px;
     display: flex;
@@ -25,38 +27,29 @@ ul{
     
 }
 
+/* Columns */
 .contact-col{
     width: 30%;
     background-color: aquamarine;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
    
 }
 
 .message-col{
     width: 70%;
     background-color: bisque;
-    height: 100vh;
     
 }
 
+/* Column-header*/
 .contact-col-top{
-    background-color: coral;
+    background-color: whitesmoke;
     border-right: 1px solid black;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
 
-}
-
-.notification{
-    background-color:cornflowerblue;
-}
-
-.search-input{
-    background-color: yellowgreen;
-    text-align: center;
-}
-
-.search-input input{
-    padding: 5px 10px;
-    width: 250px;
 }
 
 .message-col-top{
@@ -64,14 +57,102 @@ ul{
 
 }
 
+/* Column-header-contenr */
+.image-container{
+    display: flex;
+    align-items: center;
+}
+
+.image-container img{
+    width: 40px;
+    border-radius: 50%;
+
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+}
+
+.icons div{
+    padding-right: 10px ;
+    color: lightgrey;
+}
+
+/* Notification */
+.notification{
+    background-color:cornflowerblue;
+    height: 60px;
+    padding: 10px 15px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.notification a{
+    color: black
+}
+
+.notification-text{
+    margin-left: 10px;
+}
+
+
+.bell{
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    color: cornflowerblue;;
+}
+
+/* Search-input */
+.search-input{
+    background-color: white;
+    height: 30px;
+    padding-left: 15px;
+    
+    
+}
+
+.search-input input{
+    padding: 5px 10px;
+    width: 250px;
+    border: transparent;
+}
+
+/*Contacts-members  */
+.contacts-members img{
+    width: 40px;
+    border-radius: 50%;
+}
+
+.contact-name{
+    vertical-align: top;
+    padding-left: 10px;
+}
+
+.list-contact{
+    padding: 10px;
+}
+
+.list-contact li{
+    margin-bottom: 10px;
+}
+
+/* Chat-content  */
 .chat-content{
     background-image: url(../img/mine.jpg);
 }
 
+/* Input-message */
 .input-message{
     background-color: coral;
 
 }
+
 
 
 

@@ -21,39 +21,61 @@
                     <div class="contact-col">
                         <!-- Top-bar -->
                         <div class="contact-col-top">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis iusto eum ut corporis corrupti delectus blanditiis, minus maiores eius velit possimus voluptate dolore impedit? Quia, numquam? Labore totam dolores architecto.
+                            <div class="image-container">
+                                    <img src="img/avatar_io.jpg" alt="my-img">
+                                    <div>Nome utente</div>
+                            </div>
+
+                            <!-- Icons -->
+                           <div class="icons">
+                                <div>
+                                    <i class="fa-solid fa-circle-notch"></i>
+
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-message"></i>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </div>
+
+                           </div>
                             
-
-
                         </div>
+
                         <!-- Notification -->
                         <div class="notification">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, consequuntur iste a excepturi repellendus, itaque accusamus aut corporis, at eveniet illum. Velit ab, reprehenderit ipsa recusandae quo asperiores sunt est.
+                            <div class="bell">
+                                <i class="fa-solid fa-bell-slash"></i>
+                            </div>
+                            
+                            <div class="notification-text">
+                                <div>
+                                    Ricevi notifiche di nuovi messaggi
+                                </div>
+                                <div>
+                                    <a href="#">Attiva notifiche desktop</a>
+                                </div>
+                            </div>
 
                         </div>
+
                         <!-- Search-input -->
                         <div class="search-input">
+                            <span><i class="fas fa-search"></i></span>
                             <input type="text" placeholder="Cerca o inizia una nuova chat">
 
                         </div>
+                        
                         <!-- Contacts-members -->
                         <div class="contacts-members">
-                            <ul>
-                                <li>
-                                    contact
+                            <ul class="list-contact">
+                                <!-- Single-contact-template -->
+                                <li v-for="singlecontact in contacts">
+                                    <img :src=" 'img/avatar' + singlecontact.avatar + '.jpg' " :alt="singlecontact.name" class="">
+                                    <span class="contact-name">{{ singlecontact.name }}</span>
                                 </li>
-                                <li>
-                                    contact
-                                </li>
-                                <li>
-                                    contact
-                                </li>
-                                <li>
-                                    contact
-                                </li>
-                                <li>
-                                    contact
-                                </li>
+                                
                             </ul>
 
                         </div>
