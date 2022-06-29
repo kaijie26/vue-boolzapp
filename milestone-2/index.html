@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <div id="root">
+        <div class="wrapper">
+
+            <!-- Main -->
+            <main>
+                <div class="container">
+
+                    <!-- Contact-left-col -->
+                    <div class="contact-col">
+                        <!-- Top-bar -->
+                        <div class="contact-col-top">
+                            <div class="image-container">
+                                    <img src="img/avatar_io.jpg" alt="my-img">
+                                    <div>Nome utente</div>
+                            </div>
+
+                            <!-- Icons -->
+                           <div class="icons">
+                                <div>
+                                    <i class="fa-solid fa-circle-notch"></i>
+
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-message"></i>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </div>
+
+                           </div>
+                            
+                        </div>
+
+                        <!-- Notification -->
+                        <div class="notification">
+                            <div class="bell">
+                                <i class="fa-solid fa-bell-slash"></i>
+                            </div>
+                            
+                            <div class="notification-text">
+                                <div>
+                                    Ricevi notifiche di nuovi messaggi
+                                </div>
+                                <div>
+                                    <a href="#">Attiva notifiche desktop</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Search-input -->
+                        <div class="search-input">
+                            <span><i class="fas fa-search"></i></span>
+                            <input type="text" placeholder="Cerca o inizia una nuova chat">
+
+                        </div>
+                        
+                        <!-- Contacts-members -->
+                        <div class="contacts-members">
+                            <ul class="list-contact">
+                                <!-- Single-contact-template -->
+                                <li @click="currentActiveContact(index)" v-for="(singlecontact, index) in contacts">
+                                    <img :src=" 'img/avatar' + singlecontact.avatar + '.jpg' " :alt="singlecontact.name">
+                                    <span class="contact-name">{{ singlecontact.name }}</span>
+                                </li>
+                                
+                            </ul>
+
+                        </div>
+                        
+
+                    </div>
+
+                    <!-- Message-right-col -->
+                    <div class="message-col">
+                        <div class="message-col-top">
+                                <div class="image-container">
+                                    <img :src="'img/avatar' + contacts[currentActiveElement].avatar + '.jpg'" :alt="contacts[currentActiveElement].name">
+                                    <div>
+                                        <div>{{contacts[currentActiveElement].name}}</div>
+                                        <div>Ultimo accesso oggi alle</div>
+    
+                                    </div>
+
+                                </div>
+
+                                <!-- Icons -->
+                                <div class="icons">
+                                    <div>
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                    <div>
+                                        <i class="fa-solid fa-paperclip"></i>
+                                    </div>
+                                    <div>
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </div>
+
+                                </div>   
+                        </div>
+                            
+                        
+                        <!-- Chat-content -->
+                        <div class="chat-content">
+                            <!-- Message-sent -->
+                            <div v-for="(singlemessage,index) in contacts[currentActiveElement].messages" class="message sent-message" :class="{'sent-message' : singlemessage.status === 'sent', 'received-message' : singlemessage.status === 'received'} " >
+                                <div class="message-text">
+                                    {{ singlemessage.text }}
+                                    
+                                </div>
+                                <!-- Message-data -->
+                                <div class="message-data">
+                                    {{ singlemessage.date }}
+
+                                </div>
+                            </div>
+
+                            <!-- Message received -->
+                            <!-- <div v-for="(singlemessage, index) in contacts[currentActiveElement].messages" class="message received">
+                                <div class="message-text">
+                                    {{ singlemessage.text }}
+
+                                    
+
+                                </div> -->
+                                <!-- Message-data -->
+                                <!-- <div class="message-data">
+                                    10/10/20
+                                    
+                                </div>
+                            </div> -->
+                           
+                            
+                        </div>
+                        <!-- Input-message -->
+                        <div class="input-message">
+                                <div class="smile">
+                                        <i class="far fa-smile"></i>
+
+                                </div>
+
+                                <input type="text" placeholder="Scrivi un messaggio">
+
+                                <div>
+                                        <i class="fa-solid fa-microphone"></i>
+                                </div>
+
+                        </div>
+                        
+
+                    </div>
+
+                </div>
+
+            </main>
+
+        </div>
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
