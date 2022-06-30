@@ -139,12 +139,19 @@ var app = new Vue(
 
             },
 
+            // Fuznione che filtra il nome sulla barra del input
             filterContactName(){
+                // Transformo in minuscolo il testo che da l'utente sul input
                 const filterNameLower = this.searchFilterName.toLowerCase();
 
+                // Scorro gli elementi dentro l'array
                 this.contacts.forEach(element => {
+                    // Transformo i nomi dei singoli object in minuscolo
                     const filterContactNameLower = element.name.toLowerCase();
 
+                    // Applico la condizione del filtro
+                      // l'utente inserisce i caratteri e mostra in corrispondeza sulla lista i nomi con quei caratteri del object
+                      // Se i caratteri inseriti dal utente non corrispondono agli caratteri dei nomi in contacts allora non mostra nulla
                     if(filterContactNameLower.includes(filterNameLower)){
                         element.visible = true;
 

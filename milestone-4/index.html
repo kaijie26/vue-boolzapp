@@ -72,7 +72,7 @@
                         <div class="contacts-members">
                             <ul class="list-contact">
                                 <!-- Single-contact-template -->
-                                <li @click="currentActiveContact(index)" v-for="(singlecontact, index) in contacts">
+                                <li v-show="singlecontact.visible" @click="currentActiveContact(index)" v-for="(singlecontact, index) in contacts">
                                     <img :src=" 'img/avatar' + singlecontact.avatar + '.jpg' " :alt="singlecontact.name">
                                     <span class="contact-name">{{ singlecontact.name }}</span>
                                 </li>
